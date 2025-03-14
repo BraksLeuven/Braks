@@ -1,0 +1,52 @@
+/* Algemene stijlen voor de website */
+body {
+    font-family: "Georgia", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Witte achtergrond */
+    color: #d4af37; /* Goudkleurige tekst */
+    text-align: center;
+}
+
+/* Stijl voor de header */
+header {
+    background-color: #05122a; /* Donkerblauwe achtergrond */
+    padding: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 4px solid #d4af37; /* Gouden onderlijn */
+}
+
+/* Navigatiebalk */
+nav {
+    margin-top: 10px;
+}
+nav a {
+    color: #d4af37;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+/* Stijl voor de hoofdinhoud */
+main {
+    padding: 50px;
+}
+
+/* Content box stijl */
+.content-box {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 600px;
+}
+
+/* Footer stijl */
+footer {
+    background-color: #05122a;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+}
