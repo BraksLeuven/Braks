@@ -1,67 +1,126 @@
-/* Algemene stijlen voor de website */
+/* ALGEMENE INSTELLINGEN */
 body {
     font-family: "Georgia", serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* Witte achtergrond */
+    background-color: #05122a; /* Donkerblauw */
     color: #d4af37; /* Goudkleurige tekst */
     text-align: center;
 }
 
-/* Stijl voor de header */
-header {
-    background-color: #05122a; /* Donkerblauwe achtergrond */
+/* HEADER MET LOGO LINKS EN RECHTS */
+.logo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #05122a;
     padding: 20px;
-    font-size: 32px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-bottom: 4px solid #d4af37; /* Gouden onderlijn */
+    border-bottom: 4px solid #00d0ff; /* Turquoise accentlijn */
 }
 
-/* Navigatiebalk */
-nav {
-    margin-top: 10px;
+.logo-header h1 {
+    flex-grow: 1;
+    margin: 0;
+    font-size: 36px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
+
+.logo {
+    height: 80px;
+    width: auto;
+    content: url("images/braksgggg.jpg"); /* HIER staat jouw logobestand */
+}
+
+.mirrored {
+    transform: scaleX(-1);
+}
+
+/* NAVIGATIEBALK */
+nav {
+    background-color: #031026;
+    padding: 10px 0;
+    border-bottom: 2px solid #00d0ff;
+}
+
 nav a {
     color: #d4af37;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 20px;
     font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-/* Stijl voor de hoofdinhoud */
+nav a:hover {
+    color: #00d0ff;
+}
+
+/* HOOFDINHOUD */
 main {
-    padding: 50px;
+    padding: 50px 20px;
 }
 
-/* Content box stijl */
+/* CONTENT BOX */
 .content-box {
-    background: rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-    max-width: 600px;
+    background: rgba(0, 208, 255, 0.05); /* Lichtblauw doorschijnend */
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 208, 255, 0.2);
 }
 
-/* Footer stijl */
+/* TITELS IN CONTENT */
+.content-box h2 {
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.content-box h3 {
+    color: #00d0ff;
+    font-size: 22px;
+    margin-top: 25px;
+}
+
+/* PARGRAFEN */
+.content-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e3e3e3;
+}
+
+/* FOOTER */
 footer {
-    background-color: #05122a;
-    padding: 10px;
-    margin-top: 20px;
+    background-color: #031026;
+    color: #d4af37;
+    padding: 15px;
     font-size: 14px;
+    border-top: 2px solid #00d0ff;
+    margin-top: 40px;
 }
 
+/* TEAM-SECTIE */
 .team-section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
 .team-member {
-    text-align: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
     width: 200px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 208, 255, 0.1);
 }
 
 .team-member img {
@@ -73,35 +132,35 @@ footer {
 .team-member h3 {
     margin: 10px 0 5px;
     font-size: 1.2em;
+    color: #00d0ff;
 }
 
 .team-member p {
     margin: 5px 0;
     font-size: 1em;
-    .logo-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #ddd;
+    color: #cccccc;
 }
 
-.logo-header h1 {
-    margin: 0;
-    font-size: 28px;
-    text-align: center;
-    flex-grow: 1;
+/* RESPONSIVE AANPASSINGEN */
+@media (max-width: 600px) {
+    .logo {
+        height: 50px;
+    }
+
+    .logo-header h1 {
+        font-size: 24px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 16px;
+    }
+
+    .content-box {
+        padding: 20px;
+    }
 }
 
-.logo {
-    height: 60px;
-    width: auto;
-}
-
-.mirrored {
-    transform: scaleX(-1); /* Spiegelt het logo voor symmetrie */
-}
 
     color: #555;
 }
