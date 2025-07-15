@@ -8,19 +8,18 @@ body {
     text-align: center;
 }
 
-/* HEADER MET LOGO LINKS EN RECHTS */
 .logo-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #05122a;
     padding: 20px;
-    border-bottom: 4px solid #00d0ff; /* Turquoise accentlijn */
+    border-bottom: 4px solid #00d0ff;
 }
 
 .logo-header h1 {
     flex-grow: 1;
-    margin: 0;
+    margin: 0 40px;
     font-size: 36px;
     color: #ffffff;
     text-align: center;
@@ -30,13 +29,8 @@ body {
 }
 
 .logo {
-    height: 80px;
+    height: 160px; /* Dubbel zo groot als voorheen (80px → 160px) */
     width: auto;
-    content: url("images/braksgggg.jpg"); /* HIER staat jouw logobestand */
-}
-
-.mirrored {
-    transform: scaleX(-1);
 }
 
 /* NAVIGATIEBALK */
