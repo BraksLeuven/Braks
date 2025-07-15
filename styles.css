@@ -78,6 +78,31 @@ footer {
 .team-member p {
     margin: 5px 0;
     font-size: 1em;
+    .logo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo-header h1 {
+    margin: 0;
+    font-size: 28px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+.mirrored {
+    transform: scaleX(-1); /* Spiegelt het logo voor symmetrie */
+}
+
     color: #555;
 }
 
