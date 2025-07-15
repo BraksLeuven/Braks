@@ -1,13 +1,14 @@
-/* ALGEMENE INSTELLINGEN */
+/* Algemene basis */
 body {
     font-family: "Georgia", serif;
     margin: 0;
     padding: 0;
-    background-color: #05122a; /* Donkerblauw */
-    color: #d4af37; /* Goudkleurige tekst */
+    background-color: #05122a;
+    color: #ffffff;
     text-align: center;
 }
 
+/* Header met twee logo's en titel */
 .logo-header {
     display: flex;
     align-items: center;
@@ -29,19 +30,19 @@ body {
 }
 
 .logo {
-    height: 160px; /* Dubbel zo groot als voorheen (80px → 160px) */
+    height: 160px;
     width: auto;
 }
 
-/* NAVIGATIEBALK */
+/* Navigatiebalk */
 nav {
     background-color: #031026;
-    padding: 10px 0;
+    padding: 12px 0;
     border-bottom: 2px solid #00d0ff;
 }
 
 nav a {
-    color: #d4af37;
+    color: #ffffff;
     text-decoration: none;
     margin: 0 20px;
     font-size: 18px;
@@ -53,14 +54,14 @@ nav a:hover {
     color: #00d0ff;
 }
 
-/* HOOFDINHOUD */
+/* Inhoud van de pagina */
 main {
     padding: 50px 20px;
 }
 
-/* CONTENT BOX */
+/* Contentbox stijl */
 .content-box {
-    background: rgba(0, 208, 255, 0.05); /* Lichtblauw doorschijnend */
+    background: rgba(0, 208, 255, 0.05);
     padding: 30px;
     border-radius: 12px;
     max-width: 700px;
@@ -68,7 +69,6 @@ main {
     box-shadow: 0 0 10px rgba(0, 208, 255, 0.2);
 }
 
-/* TITELS IN CONTENT */
 .content-box h2 {
     color: #ffffff;
     font-size: 28px;
@@ -81,68 +81,31 @@ main {
     margin-top: 25px;
 }
 
-/* PARGRAFEN */
 .content-box p {
     font-size: 16px;
     line-height: 1.6;
-    color: #e3e3e3;
+    color: #f0f0f0;
 }
 
-/* FOOTER */
+/* Footer */
 footer {
     background-color: #031026;
-    color: #d4af37;
+    color: #ffffff;
     padding: 15px;
     font-size: 14px;
     border-top: 2px solid #00d0ff;
     margin-top: 40px;
 }
 
-/* TEAM-SECTIE */
-.team-section {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 30px 20px;
-}
-
-.team-member {
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 15px;
-    border-radius: 10px;
-    width: 200px;
-    text-align: center;
-    color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 208, 255, 0.1);
-}
-
-.team-member img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.team-member h3 {
-    margin: 10px 0 5px;
-    font-size: 1.2em;
-    color: #00d0ff;
-}
-
-.team-member p {
-    margin: 5px 0;
-    font-size: 1em;
-    color: #cccccc;
-}
-
-/* RESPONSIVE AANPASSINGEN */
+/* Responsive */
 @media (max-width: 600px) {
     .logo {
-        height: 50px;
+        height: 100px;
     }
 
     .logo-header h1 {
         font-size: 24px;
+        margin: 0 20px;
     }
 
     nav a {
@@ -153,10 +116,6 @@ footer {
     .content-box {
         padding: 20px;
     }
-}
-
-
-    color: #555;
 }
 
 
