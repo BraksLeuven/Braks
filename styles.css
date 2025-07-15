@@ -5,10 +5,9 @@ body {
     padding: 0;
     background-color: #05122a;
     color: #ffffff;
-    text-align: center;
 }
 
-/* Header met twee logo's en titel */
+/* Header met logo's */
 .logo-header {
     display: flex;
     align-items: center;
@@ -41,22 +40,38 @@ nav {
     border-bottom: 2px solid #00d0ff;
 }
 
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
 nav a {
     color: #ffffff;
     text-decoration: none;
-    margin: 0 20px;
     font-size: 18px;
     font-weight: bold;
     transition: color 0.3s ease;
+    padding: 5px 10px;
 }
 
 nav a:hover {
     color: #00d0ff;
+    background-color: rgba(0, 208, 255, 0.1);
+    border-radius: 4px;
 }
 
-/* Inhoud van de pagina */
+/* Hoofdinhoud */
 main {
     padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Contentbox stijl */
@@ -64,9 +79,9 @@ main {
     background: rgba(0, 208, 255, 0.05);
     padding: 30px;
     border-radius: 12px;
-    max-width: 700px;
     margin: 0 auto;
     box-shadow: 0 0 10px rgba(0, 208, 255, 0.2);
+    text-align: center;
 }
 
 .content-box h2 {
@@ -75,16 +90,46 @@ main {
     margin-bottom: 10px;
 }
 
-.content-box h3 {
-    color: #00d0ff;
-    font-size: 22px;
-    margin-top: 25px;
-}
-
 .content-box p {
     font-size: 16px;
     line-height: 1.6;
     color: #f0f0f0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Teamleden sectie */
+.team-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member {
+    background: rgba(0, 208, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 208, 255, 0.2);
+}
+
+.team-member h3 {
+    color: #00d0ff;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.team-member p {
+    margin: 8px 0;
+    font-size: 15px;
 }
 
 /* Footer */
@@ -95,10 +140,11 @@ footer {
     font-size: 14px;
     border-top: 2px solid #00d0ff;
     margin-top: 40px;
+    text-align: center;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
+/* Responsive aanpassingen */
+@media (max-width: 768px) {
     .logo {
         height: 100px;
     }
@@ -108,13 +154,38 @@ footer {
         margin: 0 20px;
     }
 
-    nav a {
-        margin: 0 10px;
-        font-size: 16px;
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .content-box {
-        padding: 20px;
+    nav li {
+        margin: 5px 0;
+    }
+
+    .team-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-header {
+        flex-direction: column;
+    }
+
+    .logo {
+        height: 80px;
+        margin: 10px 0;
+    }
+
+    .logo-header h1 {
+        margin: 10px 0;
     }
 }
 
