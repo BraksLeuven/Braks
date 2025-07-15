@@ -97,80 +97,91 @@ main {
     max-width: 700px;
     margin: 0 auto;
 }
+/* ... (behoud alle bestaande stijlen tot .content-box) ... */
 
-/* Teamleden sectie */
-.team-section {
+/* Team Container */
+.team-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 30px;
+}
+
+.team-row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
+    gap: 20px;
+    padding: 20px 0;
 }
 
 .team-member {
     background: rgba(0, 208, 255, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    width: 200px;
+    padding: 25px;
+    border-radius: 10px;
+    min-width: 220px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .team-member:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 208, 255, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 208, 255, 0.2);
+    background: rgba(0, 208, 255, 0.15);
 }
 
 .team-member h3 {
     color: #00d0ff;
-    margin-top: 0;
-    font-size: 20px;
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    font-weight: bold;
 }
 
-.team-member p {
-    margin: 8px 0;
-    font-size: 15px;
-}
-
-/* Footer */
-footer {
-    background-color: #031026;
+.team-member .function {
+    font-size: 16px;
     color: #ffffff;
-    padding: 15px;
+    margin: 0 0 5px 0;
+    font-style: italic;
+}
+
+.team-member .study {
     font-size: 14px;
-    border-top: 2px solid #00d0ff;
-    margin-top: 40px;
-    text-align: center;
+    color: #cccccc;
+    margin: 0;
 }
 
 /* Responsive aanpassingen */
+@media (max-width: 1000px) {
+    .team-row {
+        justify-content: flex-start;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 @media (max-width: 768px) {
-    .logo {
-        height: 100px;
-    }
-
-    .logo-header h1 {
-        font-size: 24px;
-        margin: 0 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav li {
-        margin: 5px 0;
-    }
-
-    .team-section {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .team-member {
-        width: 80%;
-        margin-bottom: 20px;
+        min-width: 200px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-member {
+        min-width: 160px;
+        padding: 15px;
+    }
+    
+    .team-member h3 {
+        font-size: 18px;
+    }
+    
+    .team-member .function {
+        font-size: 14px;
+    }
+    
+    .team-member .study {
+        font-size: 12px;
     }
 }
 
